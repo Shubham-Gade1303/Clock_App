@@ -3,7 +3,6 @@ import React, {useState,useEffect}  from "react";
 const DigitalClock = () =>{
   const [Time, setTime] = useState(() => new Date().toLocaleTimeString());
 
-
   useEffect(() =>{
     const timeId = setInterval(() =>{
       setTime(new Date().toLocaleTimeString());
@@ -17,8 +16,6 @@ const DigitalClock = () =>{
   const formatTime = (time) => {
     return time;
   }
-
-
   const clockStyle ={
     display: 'flex',
     justifyContent: 'center',
@@ -30,7 +27,6 @@ const DigitalClock = () =>{
     fontSize: '4rem',
     letterSpacing: '2px'
   };
-
   return (
     <div style={clockStyle}>
       {formatTime(Time)}
